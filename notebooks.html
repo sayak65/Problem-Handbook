@@ -476,7 +476,23 @@ document.write(`
 <section id="calculating-gc-content-of-a-dna-sequence-no-loop-edition">
 <h2>4. Calculating GC Content of a DNA sequence (No Loop Edition)<a class="headerlink" href="#calculating-gc-content-of-a-dna-sequence-no-loop-edition" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
-<p><em>to be updated</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g_count</span> <span class="o">=</span> <span class="n">dna_sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">c_count</span> <span class="o">=</span> <span class="n">dna_sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+
+<span class="n">gc_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">g_count</span> <span class="o">+</span> <span class="n">c_count</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">dna_sequence</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;GC % of the DNA sequence is = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">gc_percentage</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GC % of the DNA sequence is = 69.23%
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="determining-if-a-year-is-a-leap-year">
 <h2>5. Determining if a year is a Leap Year<a class="headerlink" href="#determining-if-a-year-is-a-leap-year" title="Permalink to this heading">#</a></h2>
