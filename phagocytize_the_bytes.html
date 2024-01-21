@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Phagocytize the Bytes &#8212; DNA to Data</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'phagocytize_the_bytes';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Set 2 Questions &amp; Solutions" href="set_2.html" />
+    <link rel="prev" title="Code With Subrata and Sayak" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DNA to Data</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Code With Subrata and Sayak
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Phagocytize the Bytes</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="set_2.html">Set 2 Questions &amp; Solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/phagocytize_the_bytes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Phagocytize the Bytes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Phagocytize the Bytes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mind-set">Mind Set</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-problem-and-build-projects">Find a Problem and Build Projects</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#but-which-programming-language-to-choose">But which programming language to choose?</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="phagocytize-the-bytes">
+<h1>Phagocytize the Bytes<a class="headerlink" href="#phagocytize-the-bytes" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<hr class="docutils" />
+<p><img alt="image" src="_images/1.spiderman-teaching.jpeg" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mind-set">
+<h1>Mind Set<a class="headerlink" href="#mind-set" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Before we embark on the journey of programming, it is essential that we align our expectations. Many beginners believe that programming is a skill that can be picked up over a weekend. This mindset is often destined for failure. Let us consider an alternative way of thinking: if programming were so easy to master, would there be such a high demand for proficient programmers? The likely answer is no.</p>
+<p>Can you learn programming in one day? One week? One month? Yes, you can learn the basics in that time. However, the ability to apply these skills to solve real-world problems typically won’t develop that quickly.</p>
+<p>So, how much time do you actually need? There’s no definitive answer to this, but I won’t leave you hanging. For someone with an average IQ, like myself, dedicating two hours daily can lead to a comfortable grasp of programming in approximately 2-3 months. Add another 1-2 months of building projects and solving problems, along with continued learning, and you’re likely to progress from the ‘beginner’ to ‘novice’ level.</p>
+<p>Please note, this guide is tailored for absolute beginners. For those at a ‘novice’ level, I plan to write a separate guide in the future.</p>
+<p>Mastering programming, just like any other discipline, demands a considerable investment of time. For some, this might mean one hour a day, while for others, it could be four. In my case, at the beginning of my journey (thanks to the pandemic), I devoted about 12-14 hours a day to coding. Find the schedule that suits you best. However, I believe that consistency is more important than the quantity of time spent each day. Remember, programming is a never-ending marathon, and maintaining motivation is crucial for continued progress. Investing excessive time in the initial stages of learning programming can often result in early burnout, so balance is key.</p>
+<p>How do I know all of this? Because I’ve been there – I failed and gave up on learning, too. My turning point came when I encountered a simple problem that I wanted to not just solve, but automate and generalize. This challenge brought me back to the world of programming. Since that day, there has not been a single day when I have not engaged in coding. Keeping this in mind, let us proceed to another essential component of this guide.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="find-a-problem-and-build-projects">
+<h1>Find a Problem and Build Projects<a class="headerlink" href="#find-a-problem-and-build-projects" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Yes! If there is one key takeaway from this guide, it is this: Identify a problem you are deeply passionate about solving. I have been coding for almost 1.5 years now, and my enduring motivation comes from this simple principle.</p>
+<p>How to Find a Problem?
+There is no one-size-fits-all answer to this. For me, the journey began with a biological problem: plotting a protein’s hydropathy index based on its sequence. While studying ‘Molecular Cell Biology’ by Alberts for my JAM exam, I encountered an intriguing graph and thought, ‘Hey, this looks cool. It could be useful for other biologists. Can I solve this?’ At that time, I did not have the necessary skills, but that is where the fun lies – in the journey of constant learning. I delved into new programming concepts, explored various libraries, and gained a deep understanding of hydropathy plots by reading the original research paper. Only then could I devise an algorithm to address this problem. Looking back, I am both proud of what I achieved and amused at how crude that initial code was.</p>
+<p>So, keep your eyes open. When you see something that sparks your curiosity, something you are eager to crack – start a project with whatever knowledge you currently possess. Believe me, you will never find the process boring.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="but-which-programming-language-to-choose">
+<h1>But which programming language to choose?<a class="headerlink" href="#but-which-programming-language-to-choose" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p>This is a question that often baffles everyone. Indeed, selecting your first programming language can shape your early learning experience and introduce you to certain language-specific concepts. However, in the long run, the choice of language becomes less significant. Every programming language is grounded in fundamental concepts that are essential to learn, irrespective of the language you start with. Later in your journey, you can easily pick up a second language and its additional concepts, which I will discuss in more detail in my guide from novice to intermediate level. But for now, remember that whichever language you choose is not critically important. You will be learning the same fundamental principles, and that should be your focus, not the language itself. The algorithms you write will mostly depend not on the language but on your intellectual ability, your brain. A computer will execute any instruction we give it, and to formulate those instructions, you need to exercise your cognitive skills.</p>
+<p>It is true that some languages are specialized for certain tasks. But as a beginner, you do not need to concern yourself with these specifics.</p>
+<p>Having said all this, I recommend one of two languages for non-coder biologists, depending on the context:</p>
+<ul class="simple">
+<li><p><strong>Python</strong>: If you have the time to learn, start with this language. You won’t need to thank me in two years; just buy me a beer. Python is an excellent language with simple, English-like syntax, and a lot of abstraction handles the low-level details, so beginners don’t have to struggle with complex syntax. Choose Python, and you’ll never regret it. Additionally, the Python community is vast and incredibly supportive, and the extensive range of available libraries can significantly facilitate your learning.</p></li>
+<li><p><strong>R</strong>: In some cases, you might need to quickly learn a programming language for data analysis, such as when you join a lab and need to start analyzing wet lab data. In such instances, I recommend R. Note that choosing R doesn’t mean you’ll leap from beginner to novice over a weekend. You’ll still need around 4-6 months. R is developed by statisticians and is primarily designed for data analysis, so for this kind of work, the transition might be smoother. Additionally, a plethora of biological data analysis libraries are available in R.</p></li>
+</ul>
+<p>Keep in mind, if your work or lab uses a specific language, whether it be Python, R, Julia, Perl, or another, consider learning that first to be productive from day one. As I’ve mentioned earlier, you can always pick up a second language later on with ease.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code With Subrata and Sayak</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="set_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Set 2 Questions &amp; Solutions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Phagocytize the Bytes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mind-set">Mind Set</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-problem-and-build-projects">Find a Problem and Build Projects</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#but-which-programming-language-to-choose">But which programming language to choose?</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sayak Dhar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
