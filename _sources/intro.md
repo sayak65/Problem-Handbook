@@ -1,4 +1,4 @@
-# Code With Subrata and Sayak
+# Welcome to DNA to Data
 
 Programming is both fun and rewarding. We have all embarked on this journey from different starting points. 
 However, any self-taught developer can attest to the challenges and obstacles encountered at the beginning. 
